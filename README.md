@@ -16,3 +16,6 @@ x AdminUser -> STI
 
 ## UI:
 - Bootstrap -> formatting
+
+## Refactor TODOS:
+- Refactor user association inegration test in post_spec
