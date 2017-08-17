@@ -24,31 +24,44 @@ describe 'navigate' do
         post2 = FactoryGirl.build_stubbed(:second_post)
         visit posts_path
         expect(page).to have_content(/Rational|content/)
-    	end
+		end
+		
+		it 'has a scope so that only post creators can see their posts' do
+			post1 = Post.create(date: Date.today, rational: "asdf", user_id: @user.id)
+			post2 = Post.create(date: Date.today, rational: "asdf", user_id: @user.id)
+
+			other_user = User.create(first_name: 'Non', last_name: 'Authorized', email: "nonauth@example.com", password: "asdfasdf", password_confirmation: "asdfasdf")
+			post_from_other_user = Post.create(date: Date.today, rational: "This post shouldn't be seen", user_id: other_user.id)
+
+			visit posts_path
+
+			expect(page).to_not have_content(/This post shouldn't be seen/)
+		end
     end
 
     describe 'new' do
         it 'has a link from the homepage' do
-		visit root_path
+			visit root_path
 
-		click_link("new_post_from_nav")
-		expect(page.status_code).to eq(200)
+			click_link("new_post_from_nav")
+			expect(page.status_code).to eq(200)
         end
     end
 
 	describe 'delete' do
         it 'can be deleted' do
-        @post = FactoryGirl.create(:post)
-        visit posts_path
+			@post = FactoryGirl.create(:post)
+			@post.update(user_id: @user.id)
+        	visit posts_path
 
-        click_link("delete_post_#{@post.id}_from_index")
-        expect(page.status_code).to eq(200)
+        	click_link("delete_post_#{@post.id}_from_index")
+        	expect(page.status_code).to eq(200)
         end
     end
 
     describe 'creation' do
         before do
-        visit new_post_path
+        	visit new_post_path
     end
 
     it 'has a new form that can be reached' do
