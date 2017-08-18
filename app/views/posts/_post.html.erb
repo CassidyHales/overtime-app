@@ -12,7 +12,7 @@
     <%= post.user.full_name %>
   </td>
   <td>
-    <%= truncate(post.rational) %>
+    <%= link_to truncate(post.rational), post %>
   </td>
   <td>
     <%= status_label post.status %>
