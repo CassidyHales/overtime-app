@@ -18,6 +18,8 @@
 ## UI:
 - x Bootstrap -> formatting
 
-## Refactor TODOS:
-- Refactor user association inegration test in post_spec
-- Refactor posts/_form for admin user with status
+## TODOS:
+- Integrate validation for phone attr in User:
+    # No spaces or dashes 
+    # It has to be exactly 10 characters 
+    # All characters have to be a number
