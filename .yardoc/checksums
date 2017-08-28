@@ -1,6 +1,6 @@
 lib/fake_sms.rb 8588ff12bae20ec3c82010b1f3d62eab1c98c67e
 lib/sms_tool.rb c24a55ea6daf9cb76e48eddd9870030857a1f04b
-app/models/post.rb 4663d6030c622d2ab47ff5f277c9203ed82cc30d
+app/models/post.rb 39d3ddf6b35409c8ef52e47d6321f0a1fbca1ca1
 app/models/user.rb f39eea5579652b0779b0af7ffd149ef38f74b11b
 app/models/audit_log.rb 66a16eed91816bb29168f0612816ea53fe4336a5
 app/models/admin_user.rb 70e55aaad482d9328466e5608d465be058605375
