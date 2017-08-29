@@ -1,7 +1,8 @@
 lib/fake_sms.rb 8588ff12bae20ec3c82010b1f3d62eab1c98c67e
 lib/sms_tool.rb c24a55ea6daf9cb76e48eddd9870030857a1f04b
 app/models/post.rb 946a5978136cad0f5435f9cfba19d6544ec3515d
-app/models/user.rb f39eea5579652b0779b0af7ffd149ef38f74b11b
+app/models/user.rb 3e8601bb45bf157e6ce10961f48e53c00bbb1a11
+app/models/employee.rb cfa3b54b4fdedd8244b5ee0faa68a48048077ab2
 app/models/audit_log.rb 66a16eed91816bb29168f0612816ea53fe4336a5
 app/models/admin_user.rb 70e55aaad482d9328466e5608d465be058605375
 app/helpers/posts_helper.rb 74162853fa81bb19e84359e36d0a2e01dd3fec05
