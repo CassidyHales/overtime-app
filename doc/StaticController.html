@@ -184,8 +184,7 @@
 6
 7
 8
-9
-10</pre>
+9</pre>
     </td>
     <td>
       <pre class="code"><span class="info file"># File 'app/controllers/static_controller.rb', line 2</span>
@@ -195,8 +194,7 @@
 		<span class='ivar'>@pending_approvals</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="Post.html" title="Post (class)">Post</a></span></span><span class='period'>.</span><span class='id identifier rubyid_submitted'>submitted</span>
 		<span class='ivar'>@recent_audit_items</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="AuditLog.html" title="AuditLog (class)">AuditLog</a></span></span><span class='period'>.</span><span class='id identifier rubyid_last'>last</span><span class='lparen'>(</span><span class='int'>10</span><span class='rparen'>)</span>
 	<span class='kw'>else</span>
-		<span class='comment'># TODO Fix scope
-</span>		<span class='ivar'>@pending_audit_confirmations</span> <span class='op'>=</span> <span class='id identifier rubyid_current_user'>current_user</span><span class='period'>.</span><span class='id identifier rubyid_audit_logs'>audit_logs</span><span class='period'>.</span><span class='id identifier rubyid_pending'>pending</span>
+		<span class='ivar'>@pending_audit_confirmations</span> <span class='op'>=</span> <span class='id identifier rubyid_current_user'>current_user</span><span class='period'>.</span><span class='id identifier rubyid_audit_logs'>audit_logs</span><span class='period'>.</span><span class='id identifier rubyid_pending'>pending</span><span class='period'>.</span><span class='id identifier rubyid_by_start_date'>by_start_date</span>
 	<span class='kw'>end</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -209,7 +207,7 @@
 </div>
 
       <div id="footer">
-  Generated on Tue Aug 29 15:43:14 2017 by
+  Generated on Tue Aug 29 16:12:24 2017 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.9 (ruby-2.4.0).
 </div>
